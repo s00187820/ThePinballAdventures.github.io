@@ -3,6 +3,7 @@
 You can use the [editor on GitHub](https://github.com/s00187820/ThePinballAdventures.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Week1: Cian- I spent most of my time in photoshop doing designs for different skins the player can acquire. Along with that im currently designing the tutorial background in my own test scene that i plan to merge into main as a basis for our game.
 
 ### Markdown
 
@@ -12,7 +13,7 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 Syntax highlighted code block
 
 # Header 1
-Week1: Cian- I spent most of my time in photoshop doing designs for different skins the player can acquire. Along with that im currently designing the tutorial background in my own test scene that i plan to merge into main as a basis for our game.
+
 
 ## Header 2
 ### Header 3
