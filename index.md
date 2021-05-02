@@ -13,6 +13,7 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 Syntax highlighted code block
 
 # Header 1
+Week1: Cian- I spent most of my time in photoshop doing designs for different skins the player can acquire. Along with that im currently designing the tutorial background in my own test scene that i plan to merge into main as a basis for our game.
 
 
 ## Header 2
