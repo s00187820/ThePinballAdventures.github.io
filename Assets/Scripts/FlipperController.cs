@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeftFlipperController : MonoBehaviour
+public class FlipperController : MonoBehaviour
 {
     public bool IsKeyPressed = false;
     public bool Istouched = false;
-    public float speed = 0f;
+    public float speed = 1700f;
     private HingeJoint2D hinge;
     private JointMotor2D joint;
     // Start is called before the first frame update
