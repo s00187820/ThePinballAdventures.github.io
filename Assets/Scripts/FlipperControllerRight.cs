@@ -1,20 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class FlipperControllerRight : MonoBehaviour
 {
+    public bool ispressed;
     public bool IsKeyPressedRight = false;
     public bool IstouchedRight = false;
     public float speed = 1700f;
     private HingeJoint2D hinge;
     private JointMotor2D joint;
+    public Button Right;
     void Start()
     {
         hinge = GetComponent<HingeJoint2D>();
         joint = hinge.motor;
     }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
@@ -26,6 +29,8 @@ public class FlipperControllerRight : MonoBehaviour
             IsKeyPressedRight = false;
         }
     }
+    
+    
     void FixedUpdate()
     {
         if (IsKeyPressedRight == true && IstouchedRight == false || IsKeyPressedRight && IstouchedRight == true)
@@ -39,5 +44,6 @@ public class FlipperControllerRight : MonoBehaviour
             hinge.motor = joint;
         }
     }
+    
 }
 
