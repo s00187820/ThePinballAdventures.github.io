@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6795739557856954553, guid: aaa8c178b55f18b48aab0e8a033fa910, type: 3}
+      propertyPath: rb2d
+      value: 
+      objectReference: {fileID: 973962024}
     - target: {fileID: 5321660204395951937, guid: aaa8c178b55f18b48aab0e8a033fa910, type: 3}
       propertyPath: m_Mass
       value: 0.7853982
@@ -188,6 +192,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaa8c178b55f18b48aab0e8a033fa910, type: 3}
+--- !u!50 &973962024 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 547978342249488257, guid: aaa8c178b55f18b48aab0e8a033fa910, type: 3}
+  m_PrefabInstance: {fileID: 534775483}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1036029791
 GameObject:
   m_ObjectHideFlags: 0

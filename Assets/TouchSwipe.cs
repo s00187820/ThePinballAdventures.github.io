@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class TouchSwipe : MonoBehaviour
 {
-    private Vector3 fp; // first position
-    private Vector3 lp; // last position
+    
+    public Rigidbody2D rb2d;//balls rigidbody
+    private Vector2 fp; // first position
+    private Vector2 lp; // last position
     private int Moves=4; //Lives for the amount of times you can do this. will adjust later
     private float Drag; // length between the two positions
     // Start is called before the first frame update
     void Start()
     {
         Drag = Screen.height * 15 / 100;// Drag is always 15% of the overall screen both horizontal and vertical
+        BallController ball = GetComponent<BallController>();
+        rb2d = ball.rb;
+        //launchH = lp.x;
+        //launchV = lp.y;
     }
 
     // Update is called once per frame
@@ -46,12 +52,14 @@ public class TouchSwipe : MonoBehaviour
                             {
                                 ////launch ball along RIGHT X axis
                                 Debug.Log("Right");
+                                rb2d.velocity = new Vector2(10f, 0f);
                                 Moves --;
                             }
                             else
                             {
                                 //Launch ball along LEFT X axis
                                 Debug.Log("Left");
+                                rb2d.velocity = new Vector2(-10f, 0f);
                                 Moves--;
                             }
                         }
@@ -61,12 +69,14 @@ public class TouchSwipe : MonoBehaviour
                             {
                                 //launch ball along UP Y axis
                                 Debug.Log("Up");
+                                rb2d.velocity = new Vector2(0f, 10f);
                                 Moves--;
                             }
                             else
                             {
                                 //launch ball all DOWN Y axis
                                 Debug.Log("Down");
+                                rb2d.velocity = new Vector2(0f, -10f);
                                 Moves--;
                             }
                         }
