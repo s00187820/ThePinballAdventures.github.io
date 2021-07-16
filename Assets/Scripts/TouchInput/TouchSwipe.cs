@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TouchSwipe : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class TouchSwipe : MonoBehaviour
     public Rigidbody2D rb2d;//balls rigidbody
     private Vector2 fp; // first position
     private Vector2 lp; // last position
-    private int Moves=4; //Lives for the amount of times you can do this. will adjust later
+    public static int Moves=4; //Lives for the amount of times you can do this. will adjust later
     private float Drag; // length between the two positions
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,7 @@ public class TouchSwipe : MonoBehaviour
                 if (Moves == 0)
                 {
                     Debug.Log("Out of moves yeah dummy");
+                  
                 }
                 else
                 {
@@ -54,6 +56,7 @@ public class TouchSwipe : MonoBehaviour
                                 Debug.Log("Right");
                                 rb2d.velocity = new Vector2(10f, 0f);
                                 Moves --;
+                                
                             }
                             else
                             {
@@ -61,6 +64,7 @@ public class TouchSwipe : MonoBehaviour
                                 Debug.Log("Left");
                                 rb2d.velocity = new Vector2(-10f, 0f);
                                 Moves--;
+                              
                             }
                         }
                         else
@@ -71,6 +75,7 @@ public class TouchSwipe : MonoBehaviour
                                 Debug.Log("Up");
                                 rb2d.velocity = new Vector2(0f, 10f);
                                 Moves--;
+
                             }
                             else
                             {
@@ -78,6 +83,7 @@ public class TouchSwipe : MonoBehaviour
                                 Debug.Log("Down");
                                 rb2d.velocity = new Vector2(0f, -10f);
                                 Moves--;
+                               
                             }
                         }
                     }
