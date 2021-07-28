@@ -15,19 +15,22 @@ public class FlipperControllerRight : MonoBehaviour
     public Button Right;
     void Start()
     {
+        
+
         hinge = GetComponent<HingeJoint2D>();
         joint = hinge.motor;
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            IsKeyPressedRight = true;
-        }
-        if (Input.GetKeyUp(KeyCode.RightArrow))
-        {
-            IsKeyPressedRight = false;
-        }
+        //if (Input.GetKeyDown(KeyCode.RightArrow))
+        //{
+        //    IsKeyPressedRight = true;
+        //}
+        //if (Input.GetKeyUp(KeyCode.RightArrow))
+        //{
+        //    IsKeyPressedRight = false;
+        //}
+      
     }
     
     
@@ -43,6 +46,10 @@ public class FlipperControllerRight : MonoBehaviour
             joint.motorSpeed = speed;
             hinge.motor = joint;
         }
+    }
+    public void Task()
+    {
+        IsKeyPressedRight = true;
     }
     
 }

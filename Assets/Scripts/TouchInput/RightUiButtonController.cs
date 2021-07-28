@@ -5,8 +5,11 @@ using UnityEngine.EventSystems;
 
 public class RightUiButtonController : MonoBehaviour, IUpdateSelectedHandler, IPointerDownHandler, IPointerUpHandler
 {
+    int Jointnum;
     public bool ispressed;
     public FlipperControllerRight right;
+    public GameObject jointselect;
+    public GameObject[] jointarray;
     public void OnPointerDown(PointerEventData eventData)
     {
         ispressed = true;
@@ -21,7 +24,7 @@ public class RightUiButtonController : MonoBehaviour, IUpdateSelectedHandler, IP
     {
         if (ispressed)
         {
-            right.IsKeyPressedRight = true;
+           right.IsKeyPressedRight = true;
         }
         else
         {
