@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 2361563348809858325}
   - component: {fileID: 2361563348809858322}
   - component: {fileID: 2361563348809858323}
-  - component: {fileID: 2361563348809858327}
-  - component: {fileID: 2361563348809858324}
   - component: {fileID: 2361563348809858326}
   - component: {fileID: 2361563349258573758}
   m_Layer: 1
@@ -30,14 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2361563348809858321}
-  m_LocalRotation: {x: -0, y: -0, z: -0.53138155, w: 0.8471327}
-  m_LocalPosition: {x: 1.36, y: -0.39, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.8713563, w: 0.49065092}
+  m_LocalPosition: {x: 1.36, y: -0.38999996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2361563348976945383}
+  m_Children: []
   m_Father: {fileID: 2361563349578372477}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -64.198}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -121.233}
 --- !u!212 &2361563348809858325
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -125,7 +122,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.42932254, y: 0.06144789}
+  m_ConnectedAnchor: {x: -0.42982897, y: 0.16073692}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -134,46 +131,6 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -30
     m_UpperAngle: 30
---- !u!231 &2361563348809858327
-SpringJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2361563348809858321}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 1
-  m_Distance: 6.383164
-  m_DampingRatio: 0
-  m_Frequency: 1
---- !u!231 &2361563348809858324
-SpringJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2361563348809858321}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 1
-  m_Distance: 6.383164
-  m_DampingRatio: 0
-  m_Frequency: 1
 --- !u!114 &2361563348809858326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,7 +174,6 @@ GameObject:
   - component: {fileID: 2361563348976945401}
   - component: {fileID: 2361563348976945382}
   - component: {fileID: 7508743858748078409}
-  - component: {fileID: 2361563350484806710}
   m_Layer: 1
   m_Name: Flipper
   m_TagString: Untagged
@@ -232,11 +188,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2361563348976945380}
-  m_LocalRotation: {x: -0, y: -0, z: 0.5521276, w: 0.83375967}
-  m_LocalPosition: {x: 1, y: 2.2, z: 0}
-  m_LocalScale: {x: 5.6270366, y: 1.009, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.024680832, w: 0.9996954}
+  m_LocalPosition: {x: 3.7759304, y: -0.33271325, z: 0}
+  m_LocalScale: {x: 5.627037, y: 1.009, z: 1}
   m_Children: []
-  m_Father: {fileID: 2361563348809858320}
+  m_Father: {fileID: 2361563349578372477}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2361563348976945401
@@ -302,7 +258,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 11.355362
+  m_Mass: 92.19327
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -312,32 +268,6 @@ Rigidbody2D:
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!61 &7508743858748078409
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2361563348976945380}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!61 &2361563350484806710
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -486,7 +416,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.41996104, y: 0.009290468}
+  m_ConnectedAnchor: {x: 0.4200538, y: 0.12946567}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -555,6 +485,7 @@ Transform:
   m_LocalPosition: {x: -5.35, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 2361563348976945383}
   - {fileID: 2361563348809858320}
   m_Father: {fileID: 2361563349986590583}
   m_RootOrder: 1
@@ -603,7 +534,6 @@ GameObject:
   - component: {fileID: 2361563350095453310}
   - component: {fileID: 2361563350095453311}
   - component: {fileID: 3742646981242240072}
-  - component: {fileID: 2361563350786038072}
   m_Layer: 1
   m_Name: Flipper
   m_TagString: Untagged
@@ -698,32 +628,6 @@ Rigidbody2D:
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!61 &3742646981242240072
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2361563350095453309}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!61 &2361563350786038072
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -22,15 +22,15 @@ public class FlipperControllerRight : MonoBehaviour
     }
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.RightArrow))
-        //{
-        //    IsKeyPressedRight = true;
-        //}
-        //if (Input.GetKeyUp(KeyCode.RightArrow))
-        //{
-        //    IsKeyPressedRight = false;
-        //}
-      
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            IsKeyPressedRight = true;
+        }
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            IsKeyPressedRight = false;
+        }
+
     }
     
     
