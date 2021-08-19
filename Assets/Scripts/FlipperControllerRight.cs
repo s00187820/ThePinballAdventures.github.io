@@ -47,10 +47,6 @@ public class FlipperControllerRight : MonoBehaviour
             hinge.motor = joint;
         }
     }
-    public void Task()
-    {
-        IsKeyPressedRight = true;
-    }
     
 }
 

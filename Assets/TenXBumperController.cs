@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BumperPointer : MonoBehaviour
+public class TenXBumperController : MonoBehaviour
 {
     public GameObject GameMaster;
     public GMController controller;
     public Text ScoreText;
     public GameObject bumper;
     public Collider2D collider;
+    int Ten = 10;
     public void Start()
     {
         controller = GameMaster.GetComponent<GMController>();
@@ -21,9 +22,9 @@ public class BumperPointer : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag=="Ball")
+        if (collision.gameObject.tag == "Ball")
         {
-            controller.Score++;
+            controller.Score+=Ten;
         }
     }
 }

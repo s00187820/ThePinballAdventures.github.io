@@ -9,7 +9,7 @@ public class TouchSwipe : MonoBehaviour
     public Rigidbody2D rb2d;//balls rigidbody
     private Vector2 fp; // first position
     private Vector2 lp; // last position
-    public static int Moves=4; //Lives for the amount of times you can do this. will adjust later
+    public static int Moves=10; //Lives for the amount of times you can do this. will adjust later
     private float Drag; // length between the two positions
     // Start is called before the first frame update
     void Start()

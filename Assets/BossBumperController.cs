@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BumperPointer : MonoBehaviour
+public class BossBumperController : MonoBehaviour
 {
     public GameObject GameMaster;
     public GMController controller;
@@ -21,9 +21,9 @@ public class BumperPointer : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag=="Ball")
+        if (collision.gameObject.tag == "Ball")
         {
-            controller.Score++;
+            controller.Score+=100;
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class RightUiButtonController : MonoBehaviour, IUpdateSelectedHandler, IPointerDownHandler, IPointerUpHandler
+public class RightUiButtonController : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     int Jointnum;
     public bool ispressed;
@@ -20,7 +20,7 @@ public class RightUiButtonController : MonoBehaviour, IUpdateSelectedHandler, IP
         ispressed = false;
     }
 
-    public void OnUpdateSelected(BaseEventData eventData)
+    public void Update()
     {
         if (ispressed)
         {
@@ -30,6 +30,6 @@ public class RightUiButtonController : MonoBehaviour, IUpdateSelectedHandler, IP
         {
             right.IsKeyPressedRight = false;
         }
+       
     }
-
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class LeftUiButtonController : MonoBehaviour, IUpdateSelectedHandler, IPointerDownHandler, IPointerUpHandler
+public class LeftUiButtonController : MonoBehaviour,  IPointerDownHandler, IPointerUpHandler
 {
     public bool ispressed;
     public FlipperControllerLeft left;
@@ -18,7 +18,7 @@ public class LeftUiButtonController : MonoBehaviour, IUpdateSelectedHandler, IPo
         ispressed = false;
     }
 
-    public void OnUpdateSelected(BaseEventData eventData)
+    public void Update()
     {
         if (ispressed)
         {
