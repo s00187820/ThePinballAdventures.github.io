@@ -55,7 +55,7 @@ public class TouchSwipe : MonoBehaviour
                                 ////launch ball along RIGHT X axis
                                 Debug.Log("Right");
                                 rb2d.velocity = new Vector2(10f, 0f);
-                                Moves --;
+                                Moves -=1;
                                 
                             }
                             else
@@ -63,7 +63,7 @@ public class TouchSwipe : MonoBehaviour
                                 //Launch ball along LEFT X axis
                                 Debug.Log("Left");
                                 rb2d.velocity = new Vector2(-10f, 0f);
-                                Moves--;
+                                Moves-=1;
                               
                             }
                         }
@@ -74,7 +74,7 @@ public class TouchSwipe : MonoBehaviour
                                 //launch ball along UP Y axis
                                 Debug.Log("Up");
                                 rb2d.velocity = new Vector2(0f, 10f);
-                                Moves--;
+                                Moves-=1;
 
                             }
                             else
@@ -82,7 +82,7 @@ public class TouchSwipe : MonoBehaviour
                                 //launch ball all DOWN Y axis
                                 Debug.Log("Down");
                                 rb2d.velocity = new Vector2(0f, -10f);
-                                Moves--;
+                                Moves-=1;
                                
                             }
                         }

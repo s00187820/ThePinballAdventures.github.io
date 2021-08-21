@@ -17,13 +17,13 @@ public class BossBumperController : MonoBehaviour
     }
     private void Update()
     {
-        ScoreText.GetComponent<Text>().text = controller.Score.ToString();
+        ScoreText.GetComponent<Text>().text = controller.ScoreNum.ToString();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ball")
         {
-            controller.Score+=100;
+            controller.ScoreNum+=100;
         }
     }
 }
