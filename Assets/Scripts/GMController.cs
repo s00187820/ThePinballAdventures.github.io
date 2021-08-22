@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GMController : MonoBehaviour
@@ -8,7 +9,7 @@ public class GMController : MonoBehaviour
     public int ScoreNum=0,LevelNum,HighScoreNum, Life=4;
     public GameObject W1,W2,W3,W3Blocker,Flippers,Ball,ResultScrn;
     public Text TimerText, Title,ScoreR,HighScore;
-    float current=0f, starting=600f;
+    float current=0f, starting=5f;
     private void Awake()
     {
         if (PlayerPrefs.HasKey("HighScore"))
@@ -77,6 +78,41 @@ public class GMController : MonoBehaviour
     }
     public void RetryGame()
     {
-        
+        current = 0f;
+        starting = 600f;
+        ScoreNum = 0;
+        Life = 4;
+    }
+    public void Back2Menu()
+    {
+        SceneManager.LoadScene("MainMenu"); 
+    }
+    public void NextLevel()
+    {
+        LevelNum = LevelNum + 1;
+        if(LevelNum==4)
+        {
+            LevelNum = 1;
+        }
+        current = 0f;
+        starting = 600f;
+        ScoreNum = 0;
+        Life = 4;
+    }
+    public void NextLevel2()
+    {
+        LevelNum = 2;
+        current = 0f;
+        starting = 600f;
+        ScoreNum = 0;
+        Life = 4;
+    }
+    public void NextLevel3()
+    {
+        LevelNum = 3;
+        current = 0f;
+        starting = 600f;
+        ScoreNum = 0;
+        Life = 4;
     }
 }
