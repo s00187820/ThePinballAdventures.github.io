@@ -6,10 +6,15 @@ using UnityEngine.UI;
 
 public class GMController : MonoBehaviour
 {
-    public int ScoreNum=0,LevelNum,HighScoreNum, Life=4;
+    public static int LevelNum;
+    public static int GetLevelVariable()
+    {
+        return LevelNum;
+    }
+    public int ScoreNum = 0, HighScoreNum, Life=4;
     public GameObject W1,W2,W3,W3Blocker,Flippers,Ball,ResultScrn;
     public Text TimerText, Title,ScoreR,HighScore;
-    float current=0f, starting=5f;
+    float current=0f, starting=120f;
     private void Awake()
     {
         if (PlayerPrefs.HasKey("HighScore"))
@@ -29,8 +34,9 @@ public class GMController : MonoBehaviour
         TimerText.text = current.ToString("0");
         if(current<=0)
         {
+            Ball.SetActive(false);
             current = 0;
-            Time.timeScale = 0;
+            Time.timeScale = 1;
             ResultScrn.SetActive(true);
             Title.text = "Game Over";
             ScoreR.text = ScoreNum.ToString();
@@ -52,12 +58,14 @@ public class GMController : MonoBehaviour
                 W2.SetActive(false);
                 W3.SetActive(false);
                 Flippers.SetActive(true);
+                //Ball.transform.position=new Vector3(-40, 12, -5);
                 break;
             case 2:
                 W1.SetActive(false);
                 W2.SetActive(true);
                 W3.SetActive(false);
                 Flippers.SetActive(true);
+                //Ball.transform.position = new Vector3(-39, 12, -5);
                 break;
             case 3:
                 W1.SetActive(false);
@@ -65,6 +73,7 @@ public class GMController : MonoBehaviour
                 W3.SetActive(true);
                 W3Blocker.SetActive(false);
                 Flippers.SetActive(false);
+                //Ball.transform.position = new Vector3(-42, 12, -5);
                 break;
         }
     }
@@ -78,14 +87,11 @@ public class GMController : MonoBehaviour
     }
     public void RetryGame()
     {
-        current = 0f;
-        starting = 600f;
-        ScoreNum = 0;
-        Life = 4;
+        SceneManager.LoadSceneAsync("Gameplay");
     }
     public void Back2Menu()
     {
-        SceneManager.LoadScene("MainMenu"); 
+        SceneManager.LoadSceneAsync("MainMenu"); 
     }
     public void NextLevel()
     {
@@ -94,23 +100,26 @@ public class GMController : MonoBehaviour
         {
             LevelNum = 1;
         }
-        current = 0f;
-        starting = 600f;
-        ScoreNum = 0;
-        Life = 4;
+        SceneManager.LoadScene("Gameplay");
     }
     public void NextLevel2()
     {
-        LevelNum = 2;
-        current = 0f;
+        LevelNum = LevelNum + 2;
+        if (LevelNum == 4)
+        {
+            LevelNum = 1;
+        }
         starting = 600f;
         ScoreNum = 0;
         Life = 4;
     }
     public void NextLevel3()
     {
-        LevelNum = 3;
-        current = 0f;
+        LevelNum = LevelNum + 3;
+        if (LevelNum == 4)
+        {
+            LevelNum = 1;
+        }
         starting = 600f;
         ScoreNum = 0;
         Life = 4;
